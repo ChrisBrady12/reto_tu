@@ -60,7 +60,7 @@ margin-bottom:20px;
 text-align:center;
 }
 .logo-area img{
-max-width:180px;
+max-width:150px;
 width:100%;
 height:auto;
 filter:drop-shadow(0 0 16px var(--primary-glow));
@@ -87,22 +87,21 @@ border-radius:26px 26px 0 0;
 margin:0 -22px 30px;
 }
 h1{
-font-size:35px;
+font-size:20px;
 font-weight:800;
 letter-spacing:1px;
 color:var(--text);
 }
 h2{
-font-size:20px;
+font-size:16px;
 font-weight:800;
 letter-spacing:1px;
 color:var(--primary);
 margin-bottom:5px;
-text-shadow:0 0 16px var(--primary-glow);
 }
 .img-footer{
 max-width:100%;
-height:110px;
+height:105px;
 border-radius:16px;
 display:block;
 margin:0 auto;
@@ -123,6 +122,46 @@ max-width:56px;
 .cs-teal2{background:#009ca4;opacity:.6;}
 .cs-orange{background:#F7941D;opacity:.4;}
 .cs-magenta{background:#EC008C;opacity:.3;}
+/* ANIMACION SOLO DEL HALO */
+@keyframes haloBreathing{
+0%{
+box-shadow:
+0 0 10px rgba(0,156,164,0.35),
+0 0 20px rgba(0,156,164,0.25);
+}
+50%{
+box-shadow:
+0 0 24px rgba(0,156,164,0.75),
+0 0 46px rgba(0,156,164,0.55);
+}
+100%{
+box-shadow:
+0 0 10px rgba(0,156,164,0.35),
+0 0 20px rgba(0,156,164,0.25);
+}
+}
+/* BOTON */
+.btn-primary{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+width:100%;
+max-width:320px;
+margin:0 auto 35px auto;
+background:linear-gradient(135deg,var(--primary),#007a82);
+border:none;
+color:#ffffff;
+padding:16px 28px;
+border-radius:14px;
+text-decoration:none;
+font-weight:700;
+letter-spacing:2px;
+font-size:25px;
+animation:haloBreathing 3s ease-in-out infinite;
+}
+.btn-primary:hover{
+background:linear-gradient(135deg,#00b1ba,var(--primary));
+}
 /* ── ESTILOS AGREGADOS: Tarjetas de video ── */
 .video-preview {
 position: relative;
@@ -185,10 +224,11 @@ background: #000;
 <img src="izzi.png" alt="logo izzi"><br>
 </div>
 <div class="container">
-<br>
 <h1>RETO</h1><br>
-<h2>¡DINOS!</h2>
-<h2>¿TU COMO LO HACES?</h2><br><br>
+<h1>¡DINOS!</h1>
+<h1>¿TU COMO LO HACES?</h1><br><br>
+<h2>OBSERVE EL VIDEO</h2><br>
+<h2>POSTERIORMENTE PRESIONE EL BOTON PARA LLENAR EL FORMULARIO Y SEGUIR INSTRUCCIONES</h2><br><br>
 <!-- VIDEO 1 -->
 <div class="video-preview">
 <img src="1.png" alt="Vista previa del video" id="previewImg1" loading="lazy">
@@ -197,7 +237,9 @@ background: #000;
 </button>
 <video id="video1" src="1.mp4" controls controlsList="nodownload noplaybackrate nomute" disablePictureInPicture></video>
 </div>
-<br><br><img src="ret.png" alt="imagen" class="img-footer">
+<br>
+<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=4kLKykqtGU2CTD_zcJvYQHlO6vDp04lHv55iyY8UaPRUQVI5Vlg0VFhKME82QVNWV0kwSkM4RlhOViQlQCNjPTEu" class="btn-primary">FORMULARIO</a><br><br>
+<img src="ret.png" alt="imagen" class="img-footer">
 <div class="color-strip">
 <span class="cs-teal"></span>
 <span class="cs-teal2"></span>
